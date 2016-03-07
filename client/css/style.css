@@ -1,0 +1,30 @@
+.border {
+	border: 5px solid #92FF9B;
+	border-radius: 15px;
+	height: 700px;
+	width: 910px;
+	margin: 0 115px;
+	text-align: center;
+	color: #66B36D;
+	font-size: 16px;
+}
+
+header img {
+	border-radius: 10px;
+	margin-bottom: 50px;
+}
+
+.button {
+	padding: 10px 20px;
+	font-size: 36px;
+	border: none;
+	background-color: white;
+	border: 5px solid #92FF9B;
+	border-radius: 15px;
+	margin-top: 100px;
+}
+
+.button:hover {
+	background-color: #92FF9B;
+	color: white;
+}
