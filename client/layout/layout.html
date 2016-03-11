@@ -1,7 +1,17 @@
-
-
 <template name="image">
 	{{#each images}}
 		<img src="{{this}}">
+	{{/each}}
+</template>
+
+<template name="badge">
+	{{#each badges}}
+		<img class="badges" src="{{this}}">
+	{{/each}}
+</template>
+
+<template name="text">
+	{{#each texts}}
+		<h2 class="badgeTitle">{{this}}</h2>
 	{{/each}}
 </template>
