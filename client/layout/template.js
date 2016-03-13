@@ -20,3 +20,18 @@ Template.text.helpers({
 		return['Toyota', 'Mercedes-Benz', 'Honda', 'Volkswagen', 'Cadillac', 'Ford']
 	}
 });
+
+Router.route('mainpage', {
+	path: '/'
+});
+
+Router.route('badgespage', {
+	path: '/badges'
+});
+
+Template.mainpage.events({
+	'click button#badges_link': function (e, tmpl) {
+		e.preventDefault();
+		Router.go('badgespage');
+	}
+});
