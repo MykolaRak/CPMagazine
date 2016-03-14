@@ -7,10 +7,11 @@
 	text-align: center;
 	color: #66B36D;
 	font-size: 16px;
+	overflow: hidden;
 }
 
 header img {
-	border-radius: 10px;
+	border-bottom: 5px solid #92FF9B;
 	margin-bottom: 50px;
 }
 
@@ -21,7 +22,7 @@ header img {
 	background-color: white;
 	border: 5px solid #92FF9B;
 	border-radius: 15px;
-	margin-top: 100px;
+	margin-top: 50px;
 }
 
 .button:hover {
@@ -30,14 +31,32 @@ header img {
 }
 
 .badges {
-	border: 5px solid #92FF9B;
+	border: 3px solid #92FF9B;
 	border-radius: 10px;
-	margin: 15px 15px 0 15px;
+	margin: 10px 0 20px 0;
+	cursor: pointer;
 }
 
-.badgeTitle {
-	width: 100px;
-	font-size: 14px;
+.badges:hover {
+	border-radius: 100px;
+}
+
+.arrowL, .arrowR {
 	float: left;
-	margin: 5px 4px 0 40px;
+	font-size: 27px;
+	color: white;
+	margin: 8px 0 0 20px;
+}
+
+.arrowR {
+	margin: 3px 0 0 0;
+}
+
+.topBar {
+	height: 50px;
+	background-color: #92FF9B;
+}
+
+.backBtn {
+	cursor: pointer;
 }
