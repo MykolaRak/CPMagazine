@@ -43,13 +43,13 @@ header img {
 
 .arrowL, .arrowR {
 	float: left;
-	font-size: 27px;
+	font-size: 18px;
 	color: white;
-	margin: 8px 0 0 20px;
+	margin: 12px 0 0 10px;
 }
 
 .arrowR {
-	margin: 3px 0 0 0;
+	margin: 10px 0 0 10px;
 }
 
 .topBar {
