@@ -4,3 +4,11 @@ Template.mainPage.events({
 		Router.go('brandPage');
 	}
 });
+
+Template.navigation.events({
+    'click .logout': function(event){
+        event.preventDefault();
+        Meteor.logout();
+        Router.go('loginPage');
+    }
+});

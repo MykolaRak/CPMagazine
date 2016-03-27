@@ -60,3 +60,65 @@ header img {
 .backBtn {
 	cursor: pointer;
 }
+
+.register, .login {
+	font-size: 14px;
+}
+
+.register, .login {
+	width: 587px;
+	margin: 0 auto;
+}
+
+.register p, .login p {
+	float: left;
+	margin-right: 20px;
+}
+
+.regBtn {
+	background-color: #92FF9B;
+	border: 1px solid #92FF9B;
+	border-radius: 10px;
+	color: white;
+}
+
+.regBtn:hover {
+	background-color: white;
+	color: #66B36D;
+}
+
+header a {
+	color: white;
+	padding: 5px;
+	border-radius: 10px;
+}
+
+header a:hover {
+	color: #66B36D;
+	text-decoration: none;
+	background-color: white
+}
+
+header ul {
+	color: white;
+	list-style: none;
+	float: right;
+}
+
+header ul li {
+	float: left;
+	padding: 10px;
+	font-size: 14px;
+}
+
+.h2 {
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+
+.regBorder {
+	border-top: 1px solid #92FF9B;
+	border-bottom: 1px solid #92FF9B;
+	padding-bottom: 55px;
+	margin-top: 30px;
+}
