@@ -1,3 +1,8 @@
 <template name="layout">
-      {{> yield}}
+	<div class="container">
+		<div class="border">
+			{{> header}}
+        	{{> yield}}
+        </div>
+    </div>
 </template>
