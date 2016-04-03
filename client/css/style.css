@@ -26,31 +26,17 @@ header img {
 	border: 5px solid #66B36D;
 	border-radius: 15px;
 	margin: 50px 0 35px 0;
+	color: #66B36D;
 }
 
 .button:hover {
 	background-color: #66B36D;
-	color: #616161;
-}
-
-.badges {
-	border: 3px solid #66B36D;
-	border-radius: 10px;
-	margin: 10px 0 20px 0;
-	cursor: pointer;
-}
-
-.badges:hover {
-	border-radius: 100px;
+	color: black;
 }
 
 .topBar {
 	height: 50px;
 	background-color: #66B36D;
-}
-
-.allBadges {
-	margin-top: -30px;
 }
 
 .register, .login {
@@ -119,4 +105,25 @@ input {
 
 input:focus {
 	outline: none;
+}
+
+.selected {
+	display: none;
+}
+
+select {
+	width: 150px;
+	height: 30px;
+	font-size: 18px;
+	border: 1px solid #66B36D;
+	background-color: black;
+	margin: 6px;
+}
+
+select:focus {
+	outline: none;
+}
+
+.select {
+	display: block;
 }

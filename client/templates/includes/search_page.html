@@ -1,0 +1,38 @@
+<template name="searchPage">
+  <body>
+    <h2 class="h2">Choose Your Car</h2>
+    <div class="select">
+        <select id="brand" onchange="myFunction()">
+            <option class="selected" selected>Brand</option>
+            {{> cars}}
+        </select>
+        <select>
+            <option class="selected" selected>Model</option>
+            {{> models}}
+        </select>
+        <select>
+            <option class="selected" selected>Year</option>
+            {{> years}}
+        </select>
+    </div>
+    <button type="button" class="button">Go!</button>
+  </body>
+ </template>
+
+ <template name="cars">
+        {{#each car}}
+            <option>{{this}}</option>
+        {{/each}}
+ </template>
+
+ <template name="models">
+        {{#each model}}
+            <option>{{this}}</option>
+        {{/each}}
+ </template>
+
+ <template name="years">
+        {{#each year}}
+            <option>{{this}}</option>
+        {{/each}}
+ </template>
