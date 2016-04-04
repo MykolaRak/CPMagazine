@@ -6,7 +6,7 @@
             <option class="selected" selected>Brand</option>
             {{> cars}}
         </select>
-        <select>
+        <select id="model">
             <option class="selected" selected>Model</option>
             {{> models}}
         </select>
@@ -20,14 +20,14 @@
  </template>
 
  <template name="cars">
-        {{#each car}}
-            <option>{{this}}</option>
+        {{#each cars}}
+            <option>{{name}}</option>
         {{/each}}
  </template>
 
  <template name="models">
         {{#each model}}
-            <option>{{this}}</option>
+            <option>{{name}}</option>
         {{/each}}
  </template>
 
