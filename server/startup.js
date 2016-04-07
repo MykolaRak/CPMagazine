@@ -1,36 +1,38 @@
-if (cars.find().count() === 0) {
-	 cars.insert({
-	     name: 'car1',
-    models: [
-      {
-        name: 'car1model1',
-        year: [2012,2013,2014]
-      },
-      {
-        name: 'car1model2',
-        year: [2012,2013,2014]
-      },
-      {
-        name: 'car1model3',
-        year: [2012,2013,2014]
-      }
-    ]
+if (Cars.find().count() === 0 && Models.find().count() === 0) {
+  Cars.insert({
+    name: 'Honda'
   });
-  cars.insert({
-    name: 'car2',
-    models: [
-      {
-        name: 'car2model1',
-        year: [2012,2013,2014]
-      },
-      {
-        name: 'car2model2',
-        year: [2012,2013,2014]
-      },
-      {
-        name: 'car2model3',
-        year: [2012,2013,2014]
-      }
-    ]
+  Cars.insert({
+    name: 'Subaru'
   });
-};
+  Models.insert({
+    id: Cars.findOne({name: 'Honda'})._id,
+    name: 'Civic',
+    years: [2012,2013,2016]
+  });
+  Models.insert({
+    id: Cars.findOne({name: 'Honda'})._id,
+    name: 'Accord',
+    years: [2012, 2013, 2016]
+  });
+  Models.insert({
+    id: Cars.findOne({name: 'Honda'})._id,
+    name: 'Jazz',
+    years: [2012, 2013, 2016]
+  });
+  Models.insert({
+    id: Cars.findOne({name: 'Subaru'})._id,
+    name: 'Impreza',
+    years: [2012, 2010, 2016]
+  });
+  Models.insert({
+    id: Cars.findOne({name: 'Subaru'})._id,
+    name: 'Legacy',
+    years: [2012, 2011, 2016]
+  });
+  Models.insert({
+    id: Cars.findOne({name: 'Subaru'})._id,
+    name: 'Legacy Outback',
+    years: [2012, 2013, 2016]
+  });
+}

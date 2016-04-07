@@ -2,37 +2,25 @@
   <body>
     <h2 class="h2">Choose Your Car</h2>
     <div class="select">
-        <select id="brand">
-            <option class="selected" selected>Brand</option>
-            {{> cars}}
-        </select>
-        <select id="model">
-            <option class="selected" selected>Model</option>
-            {{> models}}
-        </select>
-        <select>
-            <option class="selected" selected>Year</option>
-            {{> years}}
-        </select>
+      <select id="brand">
+        <option class="selected" selected>Brand</option>
+        {{#each cars}}
+          <option>{{name}}</option>
+        {{/each}}
+      </select>
+      <select id="model">
+        <option class="selected" selected>Model</option>
+        {{#each models}}
+          <option>{{name}}</option>
+        {{/each}}
+      </select>
+      <select id="years">
+        <option class="selected" selected>Year</option>
+        {{#each years}}
+          <option>{{this}}</option>
+        {{/each}}
+      </select>
     </div>
     <button type="button" class="button">Go!</button>
   </body>
- </template>
-
- <template name="cars">
-        {{#each cars}}
-            <option>{{name}}</option>
-        {{/each}}
- </template>
-
- <template name="models">
-        {{#each model}}
-            <option>{{name}}</option>
-        {{/each}}
- </template>
-
- <template name="years">
-        {{#each year}}
-            <option>{{this}}</option>
-        {{/each}}
- </template>
+</template>

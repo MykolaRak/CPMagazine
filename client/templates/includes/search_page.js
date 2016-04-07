@@ -1,39 +1,37 @@
-Template.cars.helpers({
-	cars: function() {
-    return cars.find();
-  }
+Template.searchPage.onCreated(function () {
+  this.brand = new ReactiveVar('');
+  this.model = new ReactiveVar('');
+  Meteor.subscribe('Cars');
+  Meteor.subscribe('Models');
 });
 
-Template.models.helpers({
-	model: function() {
-    var model = cars.findOne({name: Session.get('select')});
-    return model.models;
-  }
-});
-
-Template.years.helpers({
-	year: function() {
-    var model = cars.find({name: Session.get('select')}, {"models.name": 1}).fetch();
-    for(var k in model[0].models) {
-      if(model[0].models.hasOwnProperty(k)) {
-        if (model[0].models[k].name === Session.get('model')) {
-          return model[0].models[k].year;
-        }
-      }
+Template.searchPage.helpers({
+  cars: function () {
+    return Cars.find();
+  },
+  models: function () {
+    if (!Template.instance().brand.get()) {
+      return false
     }
+    var car = Cars.findOne({name: Template.instance().brand.get()})._id;
+    return Models.find({id: car});
+  },
+  years: function () {
+    if (!Template.instance().model.get()) {
+      return false
+    }
+    return Models.findOne({name: Template.instance().model.get()}).years;
   }
 });
-
-Meteor.subscribe('cars');
 
 Template.searchPage.events({
-  'change #brand': function() {
-    var sel = document.getElementById("brand");
-    Session.set('select', sel.options[sel.selectedIndex].text)
+  'change #brand': function (e, tpl) {
+    tpl.find('#years').selectedIndex = 0;
+    var sel = tpl.find('#brand');
+    tpl.brand.set(sel.options[sel.selectedIndex].text);
   },
-  'change #model': function() {
-    var sel = document.getElementById("model");
-    Session.set('model', sel.options[sel.selectedIndex].text)
+  'change #model': function (e, tpl) {
+    var sel = tpl.find('#model');
+    tpl.model.set(sel.options[sel.selectedIndex].text);
   }
 });
-
